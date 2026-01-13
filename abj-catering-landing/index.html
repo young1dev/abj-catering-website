@@ -1,8 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-094PPHXEX2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-094PPHXEX2');
+    </script>
+
     <meta charset="UTF-8">
-    <title>ABJ Catering Service</title>
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <link rel="canonical" href="https://serveabj.vercel.app/">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="SavorABJ – ABJ Catering Service | Event Catering, Cakes & Decorations">
+    <meta name="description" content="SavorABJ offers premium catering services in Abuja – delicious meals, cakes, small chops, and event decorations. Trusted by 100+ happy clients.">
+
+    <!-- Viewport for Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Keywords (optional, minor impact) -->
+    <meta name="keywords" content="ABJ Catering, Abuja Catering, Event Catering, Cakes, Small Chops, Party Decorations">
+
+    <!-- Author -->
+    <meta name="author" content="ABJ Catering Service">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://serveabj.vercel.app/">
+    <meta property="og:title" content="SavorABJ – ABJ Catering Service">
+    <meta property="og:description" content="Premium catering, cakes, small chops & event decorations in Abuja. Get a quote today!">
+    <meta property="og:image" content="https://serveabj.vercel.app/social-preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://serveabj.vercel.app/">
+    <meta property="twitter:title" content="SavorABJ – ABJ Catering Service">
+    <meta property="twitter:description" content="Premium catering, cakes, small chops & event decorations in Abuja.">
+    <meta property="twitter:image" content="https://serveabj.vercel.app/social-preview.png">
+
+
+    <title>SavorABJ – ABJ Catering Service | Event Catering, Cakes & Decorations in Lagos</title>
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -71,18 +112,28 @@
             });
         });
 
-        document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e){
-        if(this.hash) {
-            e.preventDefault();
-            const target = document.querySelector(this.hash);
-            window.scrollTo({
-                top: target.offsetTop - 80, // header offset
-                behavior: 'smooth'
+            document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e){
+                if(this.hash) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.hash);
+                    window.scrollTo({
+                        top: target.offsetTop - 80, // header offset
+                        behavior: 'smooth'
+                    });
+                }
             });
-        }
-    });
-});
+        });
+
+        document.querySelectorAll('.hero-btn, .service-cta').forEach(btn => {
+        btn.addEventListener('click', () => {
+            gtag('event', 'click', {
+            'event_category': 'CTA',
+            'event_label': btn.href
+            });
+        });
+        });
+
 
 
     
@@ -356,6 +407,24 @@
   });
 </script>
 
-    
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "SavorABJ – ABJ Catering Service",
+    "image": "https://serveabj.vercel.app/logo.png",
+    "url": "https://serveabj.vercel.app",
+    "telephone": "+2348104921566",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lagos, Nigeria",
+        "addressLocality": "Lagos",
+        "addressCountry": "NG"
+    },
+    "servesCuisine": ["African", "Continental", "Desserts"],
+    "priceRange": "$$"
+    }
+</script>
+
 </body>
 </html>
