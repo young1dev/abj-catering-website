@@ -147,7 +147,7 @@ section {
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-image: url('hero-pic.png');
+    background-image: url('/src/image/hero-pic.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -170,6 +170,7 @@ section {
     position: relative;
     z-index: 2;
     color: white;
+    justify-content: cen;
     align-items: center;
 }
 
@@ -318,17 +319,19 @@ button {
 .about {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    
     overflow: hidden;
     justify-content: center;
     align-items: center;
     position: relative;
     padding: 50px 0;
-    
-    /* background-image: url('waveabout.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
+}
+
+.about .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
 }
 
 .about::before {
@@ -339,7 +342,7 @@ button {
     width: 500px;
     height: 300px;
 
-    background: url("waveabout.svg") no-repeat;
+    background: url("/src/image/waveabout.svg") no-repeat;
     background-size: contain;
 
     z-index: 0;
@@ -418,6 +421,13 @@ button {
     box-shadow: 0 6px 10px rgba(0,0,0,0.12);
 }
 
+.service-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
 .service-img {
     width: 100%;
     border-top-left-radius: 10px;
@@ -434,11 +444,19 @@ button {
 
 .service-text h2{
     font-size: 16px;
-    display: inline-block;
-    padding: 2px 0;
+    padding: 2px 30px;
     border-bottom: 2px solid #F97316;
-    margin: 5px 0;
+    margin: 0;
     /* border-image: linear-gradient(to right, #F97316, #FACC15) 1; */
+}
+
+.service-text p {
+    display: flex;           
+    flex: 1;
+    justify-content: center;
+    align-items: center;     
+    height: 50px;  
+    margin: 0;
 }
 
 .service-cta {
@@ -461,7 +479,9 @@ button {
 .carousel-wrapper {
   position: relative;
   max-width: 1100px;
-  margin: 40px auto;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -476,7 +496,7 @@ button {
 }
 
 .carousel-item {
-  flex: 0 0 75%; /* mobile: show 1 slide mostly */
+  flex: 0 0 100%; /* mobile: show 1 slide mostly */
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
@@ -696,12 +716,16 @@ button {
     padding: 50px 0px;
 }
 
+.cta-content h2 {
+    padding: 20px ;
+}
+
 .cta-btn {
     color: white;
     background-color: #14532D;
     border: none;
     border-radius: 6px;
-    padding: 10px 15px;
+    padding: 9px 15px;
 }
 
 .cta::before {
@@ -801,7 +825,7 @@ footer {
     
 }
 .slogan span {
-    color: #14532D;
+    color: #F97316;
 }
 
 @media (min-width: 768px){
